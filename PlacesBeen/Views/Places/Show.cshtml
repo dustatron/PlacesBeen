@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Show Place</h1>
+<p>
+  @Model.Id
+</p>
+<p>
+  @Model.Name
+</p>
+<a href="/places/@Model.Id/edit"><button>Edit</button></a>
+
+<form action="/places/delete/@Model.Id" method="post">
+  <button>Delete</button>
+</form>

@@ -3,3 +3,16 @@
 }
 
 <h1>Places Index</h1>
+<ul>
+  @Model.Count
+  @foreach (var place in Model)
+{ 
+  <li>Id: @place.Id</li>
+  <li>Name: @place.Name</li>
+  <li>Picture: @place.Picture</li>
+  <li>Stay Length: @place.StayLength</li>
+  <li>Time Traveled: @place.TravelTime</li>
+  <a href="/places/@place.Id">Edit</a>
+}
+
+</ul>
