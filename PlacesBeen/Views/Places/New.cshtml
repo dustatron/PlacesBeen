@@ -1,20 +1,28 @@
 @{
   Layout = "_Layout";
 }
+<div class="col-md-6 offset-md-3">
 
-<h1>Add a place</h1>
+<h1 class="text-center" >Add a place</h1>
 <form action="/places/create" method="post">
+ <div class="form-group">
   <label for="name">Name</label>
-  <input type="text" name="name">
+  <input type="text" class="form-control" name="name">
+</div>
 
+ <div class="form-group">
   <label for="picture">Picture</label>
-  <input type="text" name="picture">
-
+  <input type="text" class="form-control" name="picture">
+</div>
+ <div class="form-group">
   <label for="stayLength">stayLength</label>
-  <input type="text" name="stayLength">
-
+  <input type="text" class="form-control" name="stayLength">
+</div>
+ <div class="form-group">
   <label for="timeTravel">Time of year you traveled</label>
-  <input type="text" name="timeTravel">
-  
-  <button type="submit">Submit</button>
+  <input type="text"class="form-control" name="timeTravel">
+</div>
+  <button type="submit" class="btn btn-info btn-block">Submit</button>
 </form>
+
+</div>

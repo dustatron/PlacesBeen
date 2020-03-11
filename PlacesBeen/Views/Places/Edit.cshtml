@@ -2,19 +2,29 @@
   Layout = "_Layout";
 }
 
-<h1>Edit</h1>
-<form action="/places/@Model.Id" method="post">
-  <label for="name">Name</label>
-  <input type="text" name="name" value="@Model.Name">
+<div class="col-md-6 offset-md-3">
 
-  <label for="picture">Picture</label>
-  <input type="text" name="picture" value="@Model.Picture">
+  <h1 class="text-center">Edit</h1>
+  <form action="/places/@Model.Id" method="post">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" name="name" value="@Model.Name">
+  </div>
 
-  <label for="stayLength">stayLength</label>
-  <input type="text" name="stayLength" value="@Model.StayLength">
+  <div class="form-group">
+    <label for="picture">Picture</label>
+    <input type="text" class="form-control" name="picture" value="@Model.Picture">
+  </div>
 
-  <label for="timeTravel">Time of year you traveled</label>
-  <input type="text" name="timeTravel" value="@Model.TravelTime">
-  
-  <button type="submit" name="id" value="@Model.Id">Update</button>
-</form>
+  <div class="form-group">
+    <label for="stayLength">stayLength</label>
+    <input type="text" class="form-control" name="stayLength" value="@Model.StayLength">
+  </div>
+
+  <div class="form-group">
+    <label for="timeTravel">Time of year you traveled</label>
+    <input type="text" class="form-control" name="timeTravel" value="@Model.TravelTime">
+  </div> 
+    <button type="submit" class="btn btn-info btn-block" name="id" value="@Model.Id">Update</button>
+  </form>
+</div>

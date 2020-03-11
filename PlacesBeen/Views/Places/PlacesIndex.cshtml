@@ -1,18 +1,20 @@
 @{
   Layout = "_Layout";
 }
+<div class="col-md-8 offset-md-2">
 
-<h1>Places Index</h1>
-<ul>
-  @Model.Count
-  @foreach (var place in Model)
-{ 
-  <li>Id: @place.Id</li>
-  <li>Name: @place.Name</li>
-  <li>Picture: @place.Picture</li>
-  <li>Stay Length: @place.StayLength</li>
-  <li>Time Traveled: @place.TravelTime</li>
-  <a href="/places/@place.Id">Edit</a>
-}
-
-</ul>
+  <h1 class="text-center">Places Index</h1>
+  <h2 class="text-center"> Number of places logged : @Model.Count </h2>
+  <ul class="list-group">
+    @foreach (var place in Model)
+  { 
+    <li class="list-group-item">Id: @place.Id</li>
+    <li class="list-group-item">Name: @place.Name</li>
+    <li class="list-group-item"><img calss="center-text" src="@place.Picture" alt="image"> </li>
+    <li class="list-group-item">Stay Length: @place.StayLength</li>
+    <li class="list-group-item">Time Traveled: @place.TravelTime</li>
+    <a href="/places/@place.Id"><button class="btn btn-success btn-lg btn-block">Edit</button></a>
+  <br>
+  }
+  </ul>
+</div>
